@@ -79,7 +79,7 @@ const LayoutBase = (props) => {
       <main id='wrapper' className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'flex-row-reverse' : '') + 'relative mt-4 flex justify-center flex-auto pb-12'}>
           {/* 左侧栏样式 */}
           <SideAreaLeft slot={leftAreaSlot} targetRef={targetRef} {...props}/>
-          <section id='container-inner' className={`${CONFIG_NEXT.NAV_TYPE !== 'normal' ? 'mt-40' : ''} lg:max-w-2xl xl:max-w-2xl flex-grow md:mt-0 min-h-screen w-full`} ref={targetRef}>
+          <section id='container-inner' className={`${CONFIG_NEXT.NAV_TYPE !== 'normal' ? 'mt-40' : ''} ml-4 lg:max-w-2xl xl:max-w-3xl flex-grow md:mt-0 min-h-screen w-full`} ref={targetRef}>
             {onLoading ? <LoadingCover/> : <> {children}</> }
           </section>
           {/* 右侧栏样式 */}

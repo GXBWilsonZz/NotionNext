@@ -35,7 +35,7 @@ export default function ArticleDetail(props) {
 
             className="shadow md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
             <div itemScope itemType="https://schema.org/Movie"
-                className="subpixel-antialiased py-10 px-5 lg:pt-4 md:px-12  dark:border-gray-700 bg-white dark:bg-hexo-black-gray"
+                className="subpixel-antialiased py-10 px-5 lg:pt-2 md:px-6  dark:border-gray-700 bg-white dark:bg-hexo-black-gray"
             >
 
                 {showArticleInfo && <header className='animate__slideInDown animate__animated'>
@@ -47,14 +47,9 @@ export default function ArticleDetail(props) {
                         </div>
                     )}
 
-                    {/* title */}
-                    <div className=" text-center font-bold text-3xl text-black dark:text-white font-serif pt-6">
-                        <NotionIcon icon={post.pageIcon} />{post.title}
-                    </div>
-
                     {/* meta */}
-                    <section className="mt-2 text-gray-400 dark:text-gray-400 font-light leading-7 text-sm">
-                        <div className='flex flex-wrap justify-center'>
+                    <section className="flex flex-row space-x-2 mt-2 text-gray-500 dark:text-gray-400 font-light font-serif leading-7 text-sm">
+                        <div className='flex flex-nowrap justify-left'>
                             {post?.type !== 'Page' && (<>
                                 <Link
                                     href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
@@ -77,10 +72,16 @@ export default function ArticleDetail(props) {
                         <WordCount />
                     </section>
 
+                    {/* title */}
+                    <div className=" text-left font-bold text-3xl text-black dark:text-white font-serif pt-3
+                    ">
+                        <NotionIcon icon={post.pageIcon} />{post.title}
+                    </div>
+
                 </header>}
 
                 {/* Notion内容主体 */}
-                <article id='notion-article' className='px-1'>
+                <article id='notion-article' className='px-0 -my-6 font-serif'>
                     {post && (<NotionPage post={post} />)}
                 </article>
 
