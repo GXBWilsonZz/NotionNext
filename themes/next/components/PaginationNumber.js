@@ -38,7 +38,7 @@ const PaginationNumber = ({ page, totalPage }) => {
             <div
                 rel="prev"
                 className={`${currentPage === 1 ? 'invisible' : 'block'
-                    } border-white dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-400 w-6 text-center cursor-pointer duration-200  hover:font-bold`}
+                    } border-none dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-400 w-6 text-center py-2 cursor-pointer duration-200  hover:font-bold`}
             >
                 <i className="fas fa-angle-left" />
             </div>
@@ -57,7 +57,7 @@ const PaginationNumber = ({ page, totalPage }) => {
             <div
                 rel="next"
                 className={`${+showNext ? 'block' : 'invisible'
-                    } border-t-2 border-white dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-400 w-6 text-center cursor-pointer duration-500  hover:font-bold`}
+                    } border-none dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-400 w-6 text-center py-2 cursor-pointer duration-500  hover:font-bold`}
             >
                 <i className="fas fa-angle-right" />
             </div>
@@ -75,8 +75,8 @@ function getPageElement(pagePrefix, page, currentPage) {
       className={
           (page + '' === currentPage + ''
             ? 'font-bold bg-blue-600 dark:bg-gray-400 text-white '
-            : 'border-t-2 duration-500 border-white hover:border-gray-400 ') +
-          'rounded-md font-serif border-white dark:border-gray-700 dark:hover:border-gray-400 cursor-pointer px-4 py-2 text-center text-base font-normal hover:font-bold'
+            : 'bg-white duration-500 border-none hover:border-gray-400 ') +
+          'shadow rounded-md font-serif border-white dark:border-gray-700 dark:hover:border-gray-400 cursor-pointer px-4 py-2 text-center text-base font-normal hover:font-bold'
       }>
 
       {page}
