@@ -18,7 +18,7 @@ const BlogPostListPage = ({ page = 1, posts = [], postCount }) => {
     return <BlogPostListEmpty />
   } else {
     return (
-      <div className='absolute top-2'>
+      <div className='relative top-2'>
         {/* 文章列表 */}
         <div id="container" className="flex flex-wrap w-3/4 mx-4 lg:space-y-4 space-y-1">
           {posts.map(post => (
