@@ -36,10 +36,10 @@ const Tabs = ({ className, children }) => {
   }
 
   return <div className={'mb-5 duration-200 ' + className}>
-    <ul className='flex justify-center space-x-5 pb-4 dark:text-gray-400 text-gray-800'>
+    <ul className='flex justify-center space-x-5 pb-4 dark:text-gray-400 text-gray-700'>
       {children.map((item, index) => {
         return <li key={index}
-                   className={(currentTab === index ? 'font-black border-b-2 border-red-400 text-red-400 animate__animated animate__jello ' : 'font-extralight cursor-pointer') + ' text-sm font-sans '}
+                   className={(currentTab === index ? 'font-black border-b-2 border-red-400 text-red-400 animate__animated animate__jello ' : 'font-extralight cursor-pointer') + ' text-sm font-serif '}
                    onClick={() => {
                      tabClickHandle(index)
                    }}>
