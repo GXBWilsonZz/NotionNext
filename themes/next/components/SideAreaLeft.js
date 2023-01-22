@@ -23,7 +23,7 @@ const SideAreaLeft = props => {
   const { post, slot, postCount } = props
   const { locale } = useGlobal()
   const showToc = post && post.toc && post.toc.length > 1
-  return <aside id='left' className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'ml-4' : 'mr-4') + ' hidden lg:block flex-col w-60'}>
+  return <aside id='left' className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'ml-4' : 'mr-4') + 'hidden lg:block flex-col w-60'}>
 
         <section
             data-aos="fade-down"
@@ -31,9 +31,9 @@ const SideAreaLeft = props => {
             data-aos-easing="ease-in-out"
             data-aos-once="false"
             data-aos-anchor-placement="top-bottom"
-            className='w-60'>
+            className='sticky w-60'>
             {/* 菜单 */}
-            <section className='sticky shadow hidden lg:block mb-5 pb-4 bg-white dark:bg-hexo-black-gray hover:shadow-xl duration-200'>
+            <section className='shadow hidden lg:block mb-5 pb-4 bg-white dark:bg-hexo-black-gray hover:shadow-xl duration-200'>
                 <Logo {...props} className='h-32' />
                 <div className='pt-2 px-2 font-sans'>
                     <MenuButtonGroup allowCollapse={true} {...props} />

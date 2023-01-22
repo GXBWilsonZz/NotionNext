@@ -22,7 +22,7 @@ const BlogPostCard = ({ post, showSummary }) => {
           <Link
             href={`${BLOG.SUB_PATH}/${post.slug}`}
             passHref
-            className={`cursor-pointer hover:underline font-serif font-bold text-3xl ${showPreview ? 'text-center' : ''
+            className={`cursor-pointer hover:none font-serif font-bold text-3xl ${showPreview ? 'text-center' : ''
               } leading-tight text-gray-700 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400`}>
 
             <NotionIcon icon={post.pageIcon} /> {post.title}
@@ -88,10 +88,10 @@ const BlogPostCard = ({ post, showSummary }) => {
             </div>
           )}
 
-          <div className="text-left border-t pt-4 border-none text-xs">
+          <div className="text-left border-t pt-4 border-none text-xs font-sans">
             <Link
               href={`${BLOG.SUB_PATH}/${post.slug}`}
-              className="hover:bg-opacity-100 hover:underline transform duration-300 p-2 font-light text-gray-600 bg-gray-100 cursor-pointer">
+              className="hover:bg-opacity-100 hover:bg-gray-200 transform duration-300 p-2 font-light text-gray-500 bg-gray-100 cursor-pointer">
 
               {locale.COMMON.ARTICLE_DETAIL}
               <i className="ml-1 fas fa-angle-right" />
