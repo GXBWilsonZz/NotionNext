@@ -58,7 +58,7 @@ const MyApp = ({ Component, pageProps }) => {
   // 默认Webfont:  请在font.js文件中检查font-family 新版改从npm本地导入；
   const DEFAULT_FONTS_URL = [
     // 'https://fonts.font.im/css2?family=Noto+Sans+SC&display=optional',
-    // 'https://fonts.font.im/css2?family=Noto+Serif+SC&display=optional'
+    'https://fonts.font.im/css2?family=Noto+Serif+SC&display=optional'
   ]
 
   // 用户指定CUSTOM_FONT 则取CUSTOM_FONT_URL

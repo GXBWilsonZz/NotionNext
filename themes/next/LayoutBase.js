@@ -74,7 +74,7 @@ const LayoutBase = (props) => {
 
       <>{headerSlot}</>
 
-      <div className='h-0.5 w-full bg-gray-700 dark:bg-gray-600 hidden lg:block'/>
+      <div className='h-0.5 w-1/2 bg-gray-700 dark:bg-gray-600 hidden lg:block'/>
 
       <main id='wrapper' className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'flex-row-reverse' : '') + 'relative flex justify-center flex-1 pb-12'}>
           {/* 左侧栏样式 */}
