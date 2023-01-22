@@ -41,8 +41,8 @@ const NotionPage = ({ post }) => {
   const zoom = isBrowser() && mediumZoom({
     container: '.notion-viewport',
     background: 'rgba(0, 0, 0, 0.2)',
-    scrollOffset: 0,
-    margin: 0
+    scrollOffset: 200,
+    margin: getMediumZoomMargin()
   })
 
   const zoomRef = React.useRef(zoom ? zoom.clone() : null)
