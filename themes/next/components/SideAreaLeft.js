@@ -31,7 +31,7 @@ const SideAreaLeft = props => {
             data-aos-easing="ease-in-out"
             data-aos-once="false"
             data-aos-anchor-placement="top-bottom"
-            className='sticky w-60'>
+            className='sticky top-4 w-60'>
             {/* 菜单 */}
             <section className='shadow hidden lg:block mb-5 pb-4 bg-white dark:bg-hexo-black-gray hover:shadow-xl duration-200'>
                 <Logo {...props} className='h-32' />
