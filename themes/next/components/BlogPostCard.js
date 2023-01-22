@@ -31,7 +31,7 @@ const BlogPostCard = ({ post, showSummary }) => {
 
           <div
             className={`flex mt-2 items-center ${showPreview ? 'justify-center' : 'justify-start'
-              } flex-wrap dark:text-gray-500 text-gray-400 hover:text-blue-500 dark:hover:text-blue-400 `}
+              } flex-wrap dark:text-gray-500 text-gray-500 `}
           >
             <div>
               {post.category && (
@@ -39,7 +39,7 @@ const BlogPostCard = ({ post, showSummary }) => {
                   <Link
                     href={`/category/${post.category}`}
                     passHref
-                    className="cursor-pointer font-light text-sm hover:underline transform">
+                    className="cursor-pointer font-light font-serif text-sm hover:text-blue-600 dark:hover:text-blue-400  transform">
 
                     <i className="mr-1 fas fa-folder" />
                     {post.category}
@@ -51,7 +51,7 @@ const BlogPostCard = ({ post, showSummary }) => {
               <Link
                 href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
                 passHref
-                className="font-light hover:underline cursor-pointer text-sm leading-4 mr-3">
+                className="font-light font-serif hover:hover:text-blue-600 dark:hover:text-blue-400  cursor-pointer text-sm leading-4 mr-3">
 
                 {post.date?.start_date}
 
@@ -91,7 +91,7 @@ const BlogPostCard = ({ post, showSummary }) => {
           <div className="text-left border-t pt-4 border-none text-xs font-sans">
             <Link
               href={`${BLOG.SUB_PATH}/${post.slug}`}
-              className="hover:bg-opacity-100 hover:bg-gray-200 transform duration-300 p-2 font-light text-gray-500 bg-gray-100 cursor-pointer">
+              className="hover:bg-opacity-100 hover:bg-gray-200 transform duration-300 py-2 px-3 font-sans font-light text-gray-500 bg-gray-100 cursor-pointer">
 
               {locale.COMMON.ARTICLE_DETAIL}
               <i className="ml-1 fas fa-angle-right" />

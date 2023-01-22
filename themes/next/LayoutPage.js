@@ -11,9 +11,7 @@ export const LayoutPage = (props) => {
       rightAreaSlot={CONFIG_NEXT.RIGHT_LATEST_POSTS && <LatestPostsGroup posts={latestPosts} />}
       {...props}
     >
-      <section className='top-2'>
       <BlogPostListPage {...props}/>
-      </section>
     </LayoutBase>
   )
 }

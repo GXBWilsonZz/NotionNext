@@ -74,12 +74,12 @@ const LayoutBase = (props) => {
 
       <>{headerSlot}</>
 
-      <div className='h-0.5 w-1/2 bg-gray-700 dark:bg-gray-600 hidden lg:block'/>
+      {/* <div className='h-0.5 w-1/2 bg-gray-700 dark:bg-gray-600 hidden lg:block'/> */}
 
-      <main id='wrapper' className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'flex-row-reverse' : '') + 'relative flex justify-center flex-1 pb-12'}>
+      <main id='wrapper' className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'flex-row-reverse' : '') + 'relative mt-4 flex justify-center flex-auto pb-12'}>
           {/* 左侧栏样式 */}
           <SideAreaLeft slot={leftAreaSlot} targetRef={targetRef} {...props}/>
-          <section id='container-inner' className={`${CONFIG_NEXT.NAV_TYPE !== 'normal' ? 'mt-40' : ''} lg:max-w-3xl xl:max-w-4xl flex-grow md:mt-0 min-h-screen w-full`} ref={targetRef}>
+          <section id='container-inner' className={`${CONFIG_NEXT.NAV_TYPE !== 'normal' ? 'mt-40' : ''} lg:max-w-2xl xl:max-w-2xl flex-grow md:mt-0 min-h-screen w-full`} ref={targetRef}>
             {onLoading ? <LoadingCover/> : <> {children}</> }
           </section>
           {/* 右侧栏样式 */}
