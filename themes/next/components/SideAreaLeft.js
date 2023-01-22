@@ -33,7 +33,7 @@ const SideAreaLeft = props => {
             data-aos-anchor-placement="top-bottom"
             className='w-60'>
             {/* 菜单 */}
-            <section className='shadow hidden lg:block mb-5 pb-4 bg-white dark:bg-hexo-black-gray hover:shadow-xl duration-200'>
+            <section className='sticky shadow hidden lg:block mb-5 pb-4 bg-white dark:bg-hexo-black-gray hover:shadow-xl duration-200'>
                 <Logo {...props} className='h-32' />
                 <div className='pt-2 px-2 font-sans'>
                     <MenuButtonGroup allowCollapse={true} {...props} />
