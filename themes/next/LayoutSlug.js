@@ -36,9 +36,9 @@ export const LayoutSlug = (props) => {
         CONFIG_NEXT.RIGHT_LATEST_POSTS && <Card><LatestPostsGroup posts={latestPosts} /></Card>
       }
     >
-
+      <div className='hover:shadow-none'>
       {!lock && <ArticleDetail {...props} />}
-
+      </div>
       {lock && <ArticleLock validPassword={validPassword} />}
 
       {/* 悬浮目录按钮 */}

@@ -33,7 +33,7 @@ export default function ArticleDetail(props) {
             data-aos-once="false"
             data-aos-anchor-placement="top-bottom"
 
-            className="shadow md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
+            className="shadow md:hover:shadow-none overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
             <div itemScope itemType="https://schema.org/Movie"
                 className="subpixel-antialiased py-10 px-5 lg:pt-2 md:px-6  dark:border-gray-700 bg-white dark:bg-hexo-black-gray"
             >
@@ -55,12 +55,13 @@ export default function ArticleDetail(props) {
                                     href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
                                     passHref
                                     legacyBehavior>
-                                    <div className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-dashed">
-                                        <i className='far fa-calendar mr-1' /> {date}
+                                    <div className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-none">
+                                        {/* <i className='far fa-calendar mr-1' /> {date} */}
+                                        {'POSTED: ' + date}
                                     </div>
                                 </Link>
-                                <span className='mr-2'> | <i className='far fa-calendar-check mr-2' />{post.lastEditedTime} </span>
-
+                                {/* <span className='mr-2'> | <i className='far fa-calendar-check mr-2' />{post.lastEditedTime} </span> */}
+                                <span className='mr-2'> | {'UPDATED: ' + post.lastEditedTime} </span>
                                 <div className="hidden busuanzi_container_page_pv font-light mr-2">
                                     <i className='mr-1 fas fa-eye' />
                                     <span className="mr-2 busuanzi_value_page_pv" />
@@ -69,7 +70,7 @@ export default function ArticleDetail(props) {
                             </>)}
                         </div>
 
-                        <WordCount />
+                        {/* <WordCount /> */}
                     </section>
 
                     {/* title */}
