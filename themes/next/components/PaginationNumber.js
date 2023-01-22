@@ -22,7 +22,8 @@ const PaginationNumber = ({ page, totalPage }) => {
         data-aos-easing="ease-in-out"
         data-aos-once="false"
         data-aos-anchor-placement="top-bottom"
-        className="my-4 mx-4 w-full flex justify-center items-end font-medium text-black hover:shadow-xl duration-500 bg-white dark:bg-hexo-black-gray dark:text-gray-300 py-3 shadow space-x-2">
+        // className="my-4 mx-4 w-full flex justify-center items-end font-medium text-black hover:shadow-xl duration-500 bg-white dark:bg-hexo-black-gray dark:text-gray-300 py-3 shadow space-x-2">
+        className="my-4 mx-4 w-full flex justify-center items-end font-medium text-black duration-500 bg-none dark:bg-none dark:text-gray-300 py-3 space-x-2">
         {/* 上一页 */}
         <Link
           href={{
@@ -73,9 +74,9 @@ function getPageElement(pagePrefix, page, currentPage) {
       passHref
       className={
           (page + '' === currentPage + ''
-            ? 'font-bold bg-gray-500 dark:bg-gray-400 text-white '
+            ? 'font-bold bg-blue-600 dark:bg-gray-400 text-white '
             : 'border-t-2 duration-500 border-white hover:border-gray-400 ') +
-          ' border-white dark:border-gray-700 dark:hover:border-gray-400 cursor-pointer w-6 text-center font-light hover:font-bold'
+          'rounded-md font-serif border-white dark:border-gray-700 dark:hover:border-gray-400 cursor-pointer px-4 py-2 text-center text-base font-normal hover:font-bold'
       }>
 
       {page}

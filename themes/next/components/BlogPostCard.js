@@ -57,7 +57,7 @@ const BlogPostCard = ({ post, showSummary }) => {
 
               </Link>
             </div>
-            <div className="md:flex-nowrap flex-wrap md:justify-start inline-block">
+            <div className="font-serif md:flex-nowrap flex-wrap md:justify-start inline-block">
               <div>
                 {' '}
                 {post.tagItems.map(tag => (
