@@ -56,7 +56,7 @@ const SideAreaLeft = props => {
                         <div key={locale.NAV.ABOUT} className='mb-5 bg-white dark:bg-hexo-black-gray duration-200 py-6'>
                             <InfoCard {...props} />
                             <>
-                                <div className='flex flex-row space-x-8 mt-6 px-4 justify-around text-center dark:text-gray-300 font-light'>
+                                <div className='flex flex-row space-x-8 mt-6  justify-center text-center dark:text-gray-300 font-light'>
                                     <span className='px-1 '>
                                         {/* <strong className='font-medium'>{postCount}</strong><p>{locale.COMMON.POSTS}</p></span> */}
                                         <strong className='text-gray-600 text-sm font-serif'>{'文章'}</strong><p className='font-minibold font-serif text-2xl'>{postCount}</p></span>

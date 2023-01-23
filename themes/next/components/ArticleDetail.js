@@ -55,30 +55,34 @@ export default function ArticleDetail(props) {
                                     href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
                                     passHref
                                     legacyBehavior>
-                                    <div className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-none">
+                                    <div className="pl-1 mr-1 cursor-pointer hover:text-blue-600 dark:hover:text-gray-200 border-b dark:border-gray-500 border-none">
                                         {/* <i className='far fa-calendar mr-1' /> {date} */}
                                         {'POSTED: ' + date}
                                     </div>
                                 </Link>
                                 {/* <span className='mr-2'> | <i className='far fa-calendar-check mr-2' />{post.lastEditedTime} </span> */}
-                                <span className='mr-2'> | {'UPDATED: ' + post.lastEditedTime} </span>
-                                <div className="hidden busuanzi_container_page_pv font-light mr-2">
+                                <span className='mr-3'> | {'UPDATED: ' + post.lastEditedTime} </span>
+                                
+                                {/* 分类 */}
+                                {post.category && <>
+                                        <Link href={`/category/${post.category}`} passHref legacyBehavior>
+                                            <div className="mr-3 cursor-pointer my-auto text-md  hover:text-blue-600 dark:hover:text-white border-b dark:text-gray-500 border-none">
+                                                <><i className="far fa-folder-open" /> {post.category}</>
+                                            </div>
+                                        </Link>
+                                </>}
+                                
+                                <div className="hidden busuanzi_container_page_pv font-light mr-3">
                                     <i className='mr-1 fas fa-eye' />
                                     <span className="busuanzi_value_page_pv" />
                                 </div>
 
                             </>)}
+
+
                         </div>
                         
-                        {/* 分类 */}
-                        {post.category && <>
-                            <div className="cursor-pointer my-auto text-md mr-2 hover:text-black dark:hover:text-white border-b dark:text-gray-500 border-none">
-                                <Link href={`/category/${post.category}`} passHref legacyBehavior>
-                                    <><i className="mr-1 far fa-folder-open" /> {post.category}</>
-                                </Link>
-                            </div>
 
-                        </>}
 
                         {/* <WordCount /> */}
                     </section>
@@ -130,7 +134,7 @@ export default function ArticleDetail(props) {
                             <>
                                 {post.tagItems && (
                                     <div className="flex flex-nowrap leading-8 p-1 py-4 overflow-x-auto">
-                                        <div className="mr-1 hidden md:block dark:text-gray-300 whitespace-nowrap">
+                                        <div className="mr-1 mt-0.5 hidden md:block dark:text-gray-300 whitespace-nowrap">
                                             {/* {locale.COMMON.TAGS}： */}
                                             {'#'} 
                                         </div>
