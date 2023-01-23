@@ -33,7 +33,7 @@ export default function ArticleDetail(props) {
             data-aos-once="false"
             data-aos-anchor-placement="top-bottom"
 
-            className="shadow md:hover:shadow-none overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
+            className="shadow md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
             <div itemScope itemType="https://schema.org/Movie"
                 className="subpixel-antialiased py-10 px-5 lg:pt-2 md:px-6  dark:border-gray-700 bg-white dark:bg-hexo-black-gray"
             >
@@ -64,11 +64,21 @@ export default function ArticleDetail(props) {
                                 <span className='mr-2'> | {'UPDATED: ' + post.lastEditedTime} </span>
                                 <div className="hidden busuanzi_container_page_pv font-light mr-2">
                                     <i className='mr-1 fas fa-eye' />
-                                    <span className="mr-2 busuanzi_value_page_pv" />
+                                    <span className="busuanzi_value_page_pv" />
                                 </div>
 
                             </>)}
                         </div>
+                        
+                        {/* 分类 */}
+                        {post.category && <>
+                            <div className="cursor-pointer my-auto text-md mr-2 hover:text-black dark:hover:text-white border-b dark:text-gray-500 border-none">
+                                <Link href={`/category/${post.category}`} passHref legacyBehavior>
+                                    <><i className="mr-1 far fa-folder-open" /> {post.category}</>
+                                </Link>
+                            </div>
+
+                        </>}
 
                         {/* <WordCount /> */}
                     </section>
@@ -104,24 +114,25 @@ export default function ArticleDetail(props) {
                     {/* 推荐文章 */}
                     {post.type === 'Post' && <RecommendPosts currentPost={post} recommendPosts={recommendPosts} />}
 
-                    <section className="flex justify-between">
+                    <section>
                         {/* 分类 */}
-                        {post.category && <>
+                        {/* {post.category && <>
                             <div className="cursor-pointer my-auto text-md mr-2 hover:text-black dark:hover:text-white border-b dark:text-gray-500 border-dashed">
                                 <Link href={`/category/${post.category}`} passHref legacyBehavior>
                                     <><i className="mr-1 far fa-folder-open" /> {post.category}</>
                                 </Link>
                             </div>
 
-                        </>}
+                        </>} */}
 
                         {/* 标签列表 */}
                         {post.type === 'Post' && (
                             <>
                                 {post.tagItems && (
                                     <div className="flex flex-nowrap leading-8 p-1 py-4 overflow-x-auto">
-                                        <div className="hidden md:block dark:text-gray-300 whitespace-nowrap">
-                                            {locale.COMMON.TAGS}：
+                                        <div className="mr-1 hidden md:block dark:text-gray-300 whitespace-nowrap">
+                                            {/* {locale.COMMON.TAGS}： */}
+                                            {'#'} 
                                         </div>
                                         {post.tagItems.map(tag => (
                                             <TagItem key={tag.name} tag={tag} />

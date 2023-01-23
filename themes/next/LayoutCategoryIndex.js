@@ -7,11 +7,12 @@ export const LayoutCategoryIndex = (props) => {
   const { locale } = useGlobal()
   return (
     <LayoutBase totalPosts={allPosts} {...props}>
-      <div className='bg-white dark:bg-hexo-black-gray px-10 py-10 shadow h-full'>
-        <div className='dark:text-gray-200 mb-5'>
-          <i className='mr-4 fas faTh' />{locale.COMMON.CATEGORY}:
+      <div className='bg-white dark:bg-hexo-black-gray px-10 py-5 shadow h-full'>
+        <div className='-mx-2 font-medium text-gray-400 font-serif dark:text-gray-200 mb-3'>
+          {'CATEGORIES'}
         </div>
-        <div id='category-list' className='duration-200 flex flex-wrap'>
+        <div id='category-list' className='border-l border-gray-300
+         duration-200 flex flex-col space-y-1'>
           {categories.map(category => {
             return (
               <Link
@@ -20,8 +21,13 @@ export const LayoutCategoryIndex = (props) => {
                 passHref
                 legacyBehavior>
                 <div
-                  className={'hover:text-black dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600 px-5 cursor-pointer py-2 hover:bg-gray-100'}>
-                  <i className='mr-4 fas fa-folder' />{category.name}({category.count})
+                  className={' flex justify-between hover:text-black dark:hover:text-white dark:text-gray-300 dark:hover:bg-gray-600 px-5 cursor-pointer py-2 hover:bg-gray-100'}>
+                    <div className='mt-1 font-serif font-medium'>
+                      {category.name}
+                    </div>
+                    <div className='text-center font-serif rounded-md bg-gray-100 py-1 px-3'>
+                      {category.count}
+                    </div>
                 </div>
               </Link>
             );

@@ -11,8 +11,8 @@ const TagList = ({ tags, currentTag }) => {
   if (!tags) {
     return <></>
   }
-  return <ul className='flex py-1 space-x-3'>
-    <li className='w-20 py-2 dark:text-gray-200 whitespace-nowrap'>标签:</li>
+  return <ul className='flex px-1 py-4 space-x-3'>
+    <li className='text-sm text-gray-500 font-serif py-2 dark:text-gray-200 whitespace-nowrap'>#TAGS</li>
     {tags.map(tag => {
       const selected = tag.name === currentTag
       return <TagItem key={tag.name} tag={tag} selected={selected}/>

@@ -17,7 +17,9 @@ const TagItem = ({ tag, selected }) => {
         duration-200 mr-1 my-1 px-2 py-1 text-sm whitespace-nowrap 
          hover:bg-gray-200 dark:hover:bg-gray-800 `}>
         <div className='text-gray-600 dark:text-gray-300 dark:hover:text-white'>
-          {selected && <i className='fas fa-tag mr-1'/>} {`${tag.name} `} {tag.count ? `(${tag.count})` : ''}
+          {/* {selected && <i className='text-blue-600 fas fa-tag mr-1'/>} {`${tag.name} `} {tag.count ? `(${tag.count})` : ''} */}
+          <li className= {`${selected ? 'text-blue-600' : ''} font-normal font-serif`}> {`${tag.name} `} {tag.count ? `(${tag.count})` : ''}</li>
+
         </div>
       </li>
     </Link>
