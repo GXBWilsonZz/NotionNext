@@ -26,7 +26,7 @@ const BlogPostArchive = ({ posts = [], archiveTitle }) => {
               key={post.id}
               className="border-l-2 p-1 py-2 text-xs md:text-base items-center   dark:border-gray-400 transform duration-500"
             >
-              <div className='flex space-x-4'>
+              <div className='flex space-x-3.5'>
                 <div class="bg-gray-300 rounded-full h-3 w-3 mt-1.5 -ml-2.5 "></div>
                 <div id={post?.date?.start_date}>
                   <span className="font-serif text-gray-400">{post.date?.start_date}</span>{' '}
@@ -36,7 +36,7 @@ const BlogPostArchive = ({ posts = [], archiveTitle }) => {
               <Link
                     href={`${BLOG.SUB_PATH}/${post.slug}`}
                     passHref
-                    className="font-bold font-serif ml-4 dark:text-gray-400  dark:hover:text-gray-300 overflow-x-hidden hover:underline cursor-pointer text-gray-600">
+                    className="font-serif ml-4 dark:text-gray-400  dark:hover:text-gray-300 overflow-x-hidden hover:text-blue-600 cursor-pointer">
 
                     {post.title}
 
