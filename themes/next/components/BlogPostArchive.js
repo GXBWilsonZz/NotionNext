@@ -24,7 +24,7 @@ const BlogPostArchive = ({ posts = [], archiveTitle }) => {
           {posts.map(post => (
             <li
               key={post.id}
-              className="border-l-2 p-1 py-2 text-xs md:text-base items-center   dark:border-gray-400 transform duration-500"
+              className="border-l-2 p-1 pt-2 pb-4 text-xs md:text-base items-center   dark:border-gray-400 transform duration-500"
             >
               <div className='flex space-x-3.5'>
                 <div class="bg-gray-300 rounded-full h-3 w-3 mt-1.5 -ml-2.5 "></div>

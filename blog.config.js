@@ -15,11 +15,11 @@ const BLOG = {
   LINK: '', // 网站地址
   KEYWORDS: 'Notion, 博客', // 网站关键词 英文逗号隔开
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
-  CONTACT_EMAIL: '', // 邮箱
-  CONTACT_WEIBO: '', // 你的微博个人主页
-  CONTACT_TWITTER: '', // 你的twitter个人主页
-  CONTACT_GITHUB: '', // 你的github个人主页
-  CONTACT_TELEGRAM: '', // 你的telegram 地址 例如 https://t.me/tangly_1024
+  CONTACT_EMAIL: 'test', // 邮箱
+  CONTACT_WEIBO: 'test', // 你的微博个人主页
+  CONTACT_TWITTER: 'test', // 你的twitter个人主页
+  CONTACT_GITHUB: 'test', // 你的github个人主页
+  CONTACT_TELEGRAM: 'test', // 你的telegram 地址 例如 https://t.me/tangly_1024
   CONTACT_LINKEDIN: '', // 你的linkedIn 首页
 
   // 网站默认使用PingFangSC及NotoSansSC，
@@ -56,7 +56,7 @@ const BLOG = {
   POST_LIST_PREVIEW: process.env.NEXT_PUBLIC_POST_PREVIEW || 'false', //  是否在列表加载文章预览
   POST_PREVIEW_LINES: 12, // 预览博客行数
   POST_RECOMMEND_COUNT: 4, // 推荐文章数量
-  POSTS_PER_PAGE: 1, // post counts per page
+  POSTS_PER_PAGE: 10, // post counts per page
   POSTS_SORT_BY: 'notion', // 排序方式 'date'按时间,'notion'由notion控制
 
   PREVIEW_CATEGORY_COUNT: 16, // 首页最多展示的分类数量，0为不限制
