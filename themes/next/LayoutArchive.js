@@ -19,7 +19,7 @@ export const LayoutArchive = (props) => {
 
   return (
     <LayoutBase {...props}>
-      <div className="mb-10 pb-20 bg-white md:p-12 p-3 dark:bg-hexo-black-gray shadow-md min-h-full">
+      <div className="mb-10 pb-20 bg-white md:px-14 py-8 dark:bg-hexo-black-gray shadow-md min-h-full">
         {Object.keys(archivePosts).map(archiveTitle => (
           <BlogPostArchive
             key={archiveTitle}
