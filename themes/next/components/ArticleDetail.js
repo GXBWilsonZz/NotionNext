@@ -35,20 +35,12 @@ export default function ArticleDetail(props) {
 
             className="shadow md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
             <div itemScope itemType="https://schema.org/Movie"
-                className="subpixel-antialiased py-10 px-5 lg:pt-2 md:px-6  dark:border-gray-700 bg-white dark:bg-hexo-black-gray"
+                className="subpixel-antialiased py-10 px-5 lg:pt-1 md:px-6  dark:border-gray-700 bg-white dark:bg-hexo-black-gray"
             >
 
                 {showArticleInfo && <header className='animate__slideInDown animate__animated'>
-                    {/* 头图 */}
-                    {CONFIG_NEXT.POST_HEADER_IMAGE_VISIBLE && post?.type && !post?.type !== 'Page' && post?.page_cover && (
-                        <div className="w-full relative md:flex-shrink-0 overflow-hidden">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img alt={post.title} src={post?.page_cover} className='object-center w-full' />
-                        </div>
-                    )}
-
                     {/* meta */}
-                    <section className="flex flex-row space-x-2 mt-2 text-gray-500 dark:text-gray-400 font-light font-serif leading-7 text-sm">
+                    <section className="flex flex-row space-x-2 -mx-1 my-2 text-gray-500 dark:text-gray-400 font-light font-serif leading-7 text-sm">
                         <div className='flex flex-nowrap justify-left'>
                             {post?.type !== 'Page' && (<>
                                 <Link
@@ -86,6 +78,14 @@ export default function ArticleDetail(props) {
 
                         {/* <WordCount /> */}
                     </section>
+
+                    {/* 头图 */}
+                    {CONFIG_NEXT.POST_HEADER_IMAGE_VISIBLE && post?.type && !post?.type !== 'Page' && post?.page_cover && (
+                        <div className="w-full relative md:flex-shrink-0 overflow-hidden">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img alt={post.title} src={post?.page_cover} className='object-center w-full' />
+                        </div>
+                    )}
 
                     {/* title */}
                     <div className=" text-left font-bold text-3xl text-black dark:text-white font-serif pt-3
