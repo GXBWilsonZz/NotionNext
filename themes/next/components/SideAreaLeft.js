@@ -25,24 +25,7 @@ const SideAreaLeft = props => {
   const showToc = post && post.toc && post.toc.length > 1
   return <aside id='left' className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'ml-4' : 'mr-4') + 'hidden lg:block flex-col w-60'}>
         <div className='sticky top-2 '>
-            <section
-                data-aos="fade-down"
-                data-aos-duration="600"
-                data-aos-easing="ease-in-out"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-bottom"
-                className='w-60'>
-                {/* 菜单 */}
-                <section className='shadow hidden lg:block mb-5 pb-4 bg-white dark:bg-hexo-black-gray hover:shadow-xl duration-200'>
-                    <Logo {...props} className='h-32' />
-                    <div className='pt-2 px-2 font-sans'>
-                        <MenuButtonGroup allowCollapse={true} {...props} />
-                    </div>
-                    {CONFIG_NEXT.MENU_SEARCH && <div className='px-2 pt-2 font-sans'>
-                        <SearchInput {...props} />
-                    </div>}
-                </section>
-            </section>
+
 
             <div className='hidden lg:block'>
                 <Card>
@@ -75,6 +58,25 @@ const SideAreaLeft = props => {
                     {slot}
                 </div>}
             </div>
+
+            <div
+                data-aos="fade-down"
+                data-aos-duration="600"
+                data-aos-easing="ease-in-out"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-bottom"
+                className='w-60 mt-4'>
+                {/* 菜单 */}
+                <section className='shadow hidden lg:block mb-5 pb-4 bg-white dark:bg-hexo-black-gray hover:shadow-xl duration-200'>
+                    <div className='pt-2 px-2 font-sans'>
+                        <MenuButtonGroup allowCollapse={true} {...props} />
+                    </div>
+                    {CONFIG_NEXT.MENU_SEARCH && <div className='px-2 pt-2 font-sans'>
+                        <SearchInput {...props} />
+                    </div>}
+                </section>
+            </div>
+
         </div>
     </aside>
 }

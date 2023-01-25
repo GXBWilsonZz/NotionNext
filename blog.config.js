@@ -11,8 +11,8 @@ const BLOG = {
   APPEARANCE: 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
 
   AUTHOR: 'gxbwilsonzz', // 作者
-  BIO: 'ICer', // 作者简介
-  LINK: 'https://myWebsite', // 网站地址
+  BIO: 'A blog mainly on IC design techniques.', // 作者简介
+  LINK: 'https://www.ic-noobie.xyz', // 网站地址
   KEYWORDS: 'Notion, 博客', // 网站关键词 英文逗号隔开
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
   CONTACT_EMAIL: 'test', // 邮箱
