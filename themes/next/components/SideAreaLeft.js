@@ -9,6 +9,7 @@ import Logo from './Logo'
 import Card from './Card'
 import CONFIG_NEXT from '../config_next'
 import BLOG from '@/blog.config'
+import Link from 'next/link'
 
 /**
  * 侧边平铺
@@ -42,7 +43,13 @@ const SideAreaLeft = props => {
                                 <div className='flex flex-row space-x-8 mt-4  justify-center text-center dark:text-gray-300 font-light'>
                                     <span className='px-1 '>
                                         {/* <strong className='font-medium'>{postCount}</strong><p>{locale.COMMON.POSTS}</p></span> */}
-                                        <strong className='text-gray-600 text-sm font-serif'>{'文章'}</strong><p className='font-minibold font-serif text-2xl'>{postCount}</p></span>
+                                        <strong className='text-gray-600 text-sm font-serif'>{'文章'}</strong>
+                                        <Link href={'/archive'} passHref>
+                                            <p className='font-minibold font-serif text-2xl hover:text-blue-600'>
+                                                {postCount}
+                                            </p>
+                                        </Link>
+                                    </span>
                                     <span className='px-1 busuanzi_container_site_uv hidden'>
                                         {/* | <strong className='pl-1 busuanzi_value_site_uv font-medium' />{locale.COMMON.VISITORS}</span> */}
                                         <strong className='text-gray-600 text-sm font-serif'>{'访客'}</strong><p className='font-minibold font-serif text-2xl busuanzi_value_site_uv'/></span>
