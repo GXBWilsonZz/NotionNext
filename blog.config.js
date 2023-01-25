@@ -15,11 +15,11 @@ const BLOG = {
   LINK: 'https://www.ic-noobie.xyz', // 网站地址
   KEYWORDS: 'Notion, 博客', // 网站关键词 英文逗号隔开
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
-  CONTACT_EMAIL: 'test', // 邮箱
-  CONTACT_WEIBO: 'test', // 你的微博个人主页
-  CONTACT_TWITTER: 'test', // 你的twitter个人主页
-  CONTACT_GITHUB: 'test', // 你的github个人主页
-  CONTACT_TELEGRAM: 'test', // 你的telegram 地址 例如 https://t.me/tangly_1024
+  CONTACT_EMAIL: '', // 邮箱
+  CONTACT_WEIBO: '', // 你的微博个人主页
+  CONTACT_TWITTER: '', // 你的twitter个人主页
+  CONTACT_GITHUB: '', // 你的github个人主页
+  CONTACT_TELEGRAM: '', // 你的telegram 地址 例如 https://t.me/tangly_1024
   CONTACT_LINKEDIN: '', // 你的linkedIn 首页
 
   // 网站默认使用PingFangSC及NotoSansSC，
@@ -154,7 +154,7 @@ const BLOG = {
   ANALYTICS_BUSUANZI_ENABLE: true, // 展示网站阅读量、访问数 see http://busuanzi.ibruce.info/
   ANALYTICS_BAIDU_ID: process.env.NEXT_PUBLIC_ANALYTICS_BAIDU_ID || '', // e.g 只需要填写百度统计的id，[baidu_id] -> https://hm.baidu.com/hm.js?[baidu_id]
   ANALYTICS_CNZZ_ID: process.env.NEXT_PUBLIC_ANALYTICS_CNZZ_ID || '', // 只需要填写站长统计的id, [cnzz_id] -> https://s9.cnzz.com/z_stat.php?id=[cnzz_id]&web_id=[cnzz_id]
-  ANALYTICS_GOOGLE_ID: process.env.NEXT_PUBLIC_ANALYTICS_GOOGLE_ID || '', // 谷歌Analytics的id e.g: G-XXXXXXXXXX
+  ANALYTICS_GOOGLE_ID: process.env.NEXT_PUBLIC_ANALYTICS_GOOGLE_ID || 'G-G456H50ZF7', // 谷歌Analytics的id e.g: G-XXXXXXXXXX
 
   ANALYTICS_ACKEE_TRACKER: process.env.NEXT_PUBLIC_ANALYTICS_ACKEE_TRACKER || '', // e.g 'https://ackee.tangly1024.net/tracker.js'
   ANALYTICS_ACKEE_DATA_SERVER: process.env.NEXT_PUBLIC_ANALYTICS_ACKEE_DATA_SERVER || '', // e.g https://ackee.tangly1024.net , don't end with a slash
