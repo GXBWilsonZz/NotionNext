@@ -134,10 +134,10 @@ export default function ArticleDetail(props) {
                             <>
                                 {post.tagItems && (
                                     <div className="flex flex-nowrap leading-8 p-1 py-4 overflow-x-auto">
-                                        <div className="mr-1 mt-0.5 hidden md:block dark:text-gray-300 whitespace-nowrap">
+                                        {/* <div className="mr-1 mt-0.5 hidden md:block dark:text-gray-300 whitespace-nowrap"> */}
                                             {/* {locale.COMMON.TAGS}： */}
-                                            {'#'} 
-                                        </div>
+                                            {/* {'#'}  */}
+                                        {/* </div>  */}
                                         {post.tagItems.map(tag => (
                                             <TagItem key={tag.name} tag={tag} />
                                         ))}
@@ -152,7 +152,7 @@ export default function ArticleDetail(props) {
 
                 {/* 评论互动 */}
                 <div className="duration-200 w-full dark:border-gray-700 bg-white dark:bg-hexo-black-gray">
-                    <Comment frontMatter={post} />
+                    {post.type === 'Post' &&<Comment frontMatter={post} />}
                 </div>
             </div>
 
