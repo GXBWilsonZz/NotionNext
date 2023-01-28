@@ -10,7 +10,7 @@ const BLOG = {
   SINCE: 2023, // e.g if leave this empty, current year will be used.
   APPEARANCE: 'light', // ['light', 'dark', 'auto'], // light 日间模式 ， dark夜间模式， auto根据时间和主题自动夜间模式
 
-  AUTHOR: 'gxbwilsonzz', // 作者
+  AUTHOR: 'wilson1614', // 作者
   BIO: 'A blog mainly on IC design techniques.', // 作者简介
   LINK: 'https://www.ic-noobie.xyz', // 网站地址
   KEYWORDS: 'Notion, 博客', // 网站关键词 英文逗号隔开
