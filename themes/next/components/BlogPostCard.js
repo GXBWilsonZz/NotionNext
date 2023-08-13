@@ -43,10 +43,11 @@ const BlogPostCard = ({ post, showSummary }) => {
                   {post.date?.start_date}
 
                 </Link>
-                <span className="mx-2">/</span>
+                
               </>
               {post.category && (
                 <>
+                  <span className="mx-2">·</span>
                   <Link
                     href={`/category/${post.category}`}
                     passHref
@@ -72,7 +73,7 @@ const BlogPostCard = ({ post, showSummary }) => {
             </div>
           </div>
 
-          {(!showPreview || showSummary) && !post.results && (
+          {(!showPreview || showSummary)&& post.summary && !post.results && (
             <p className="mt-6 mb-6 text-gray-600 dark:text-gray-300 font-sans text-[15px] font-light leading-7">
               {post.summary}
             </p>
