@@ -10,7 +10,7 @@ export default function BlogAround ({ prev, next }) {
     return <></>
   }
   return (
-    <section className='text-gray-800 border-t dark:text-gray-300 flex flex-wrap  py-2 lg:flex-nowrap lg:space-x-10 '>
+    <section className='text-gray-800 border-t flex flex-wrap justify-between dark:text-gray-300 py-2 '>
       {prev && <Link
         href={`/${prev.slug}`}
         passHref
@@ -22,7 +22,7 @@ export default function BlogAround ({ prev, next }) {
       {next && <Link
         href={`/${next.slug}`}
         passHref
-        className='justify-end text-sm flex py-3 text-gray-600 font-serif hover:text-blue-600 cursor-pointer'>
+        className='justify-end text-sm py-3 text-gray-600 font-serif hover:text-blue-600 cursor-pointer'>
         {next.title}
         <i className='ml-1 my-1 fa fa-chevron-right' />
 
