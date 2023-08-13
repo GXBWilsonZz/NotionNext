@@ -33,7 +33,8 @@ export default function ArticleDetail(props) {
             data-aos-once="false"
             data-aos-anchor-placement="top-bottom"
 
-            className="shadow md:hover:shadow-2xl overflow-x-auto flex-grow mx-auto w-screen md:w-full ">
+            //下面这里删掉了原有的w-screen
+            className="shadow md:hover:shadow-2xl overflow-x-auto  flex-grow mx-auto  md:w-full">
             <div itemScope itemType="https://schema.org/Movie"
                 className="subpixel-antialiased py-10 px-5 lg:pt-1 md:px-6  dark:border-gray-700 bg-white dark:bg-hexo-black-gray"
             >

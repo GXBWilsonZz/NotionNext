@@ -41,7 +41,7 @@ export default function TopNavBar(props) {
                 </div>
             </Collapse>
 
-            <div className='flex w-full h-12 shadow bg-white dark:bg-hexo-black-gray px-7 items-between'>
+            <div className='flex w-full h-12  bg-white shadow dark:bg-hexo-black-gray px-7 items-between'>
 
                 {/* 图标Logo */}
                 <LogoBar {...props} />
