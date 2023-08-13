@@ -116,7 +116,7 @@ const TopNav = (props) => {
       </div>
 
       <Collapse type='vertical' isOpen={isOpen}>
-        <div className='bg-white py-1 px-5'>
+        <div className='bg-white py-1 px-5 dark:bg-gray-700'>
           <MenuButtonGroup {...props} from='top'/>
           </div>
       </Collapse>

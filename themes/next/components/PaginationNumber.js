@@ -75,7 +75,7 @@ function getPageElement(pagePrefix, page, currentPage) {
       className={
           (page + '' === currentPage + ''
             ? 'font-bold bg-blue-600 dark:bg-gray-400 text-white '
-            : 'bg-white duration-500 border-none hover:border-gray-400 ') +
+            : 'bg-white dark:bg-gray-700 duration-500 border-none hover:border-gray-400 ') +
           'shadow rounded-md font-serif border-white dark:border-gray-700 dark:hover:border-gray-400 cursor-pointer px-4 py-2 text-center text-base font-normal hover:font-bold'
       }>
 
