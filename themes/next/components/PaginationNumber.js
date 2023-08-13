@@ -23,7 +23,7 @@ const PaginationNumber = ({ page, totalPage }) => {
         data-aos-once="false"
         data-aos-anchor-placement="top-bottom"
         // className="my-4 mx-4 w-full flex justify-center items-end font-medium text-black hover:shadow-xl duration-500 bg-white dark:bg-hexo-black-gray dark:text-gray-300 py-3 shadow space-x-2">
-        className="my-4 mx-4 w-full flex justify-center items-end font-medium text-black duration-500 bg-none dark:bg-none dark:text-gray-300 py-3 space-x-2">
+        className="my-4  w-full flex justify-center items-end font-medium text-black duration-500 bg-none dark:bg-none dark:text-gray-300 py-3 space-x-2">
         {/* 上一页 */}
         <Link
           href={{

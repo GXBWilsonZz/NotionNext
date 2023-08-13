@@ -36,12 +36,13 @@ export default function ArticleDetail(props) {
             //下面这里删掉了原有的w-screen
             className="shadow md:hover:shadow-2xl overflow-x-auto  flex-grow mx-auto  md:w-full">
             <div itemScope itemType="https://schema.org/Movie"
-                className="subpixel-antialiased py-10 px-5 lg:pt-1 md:px-6  dark:border-gray-700 bg-white dark:bg-hexo-black-gray"
+                className="subpixel-antialiased py-10 px-5 pt-2 md:px-6  dark:border-gray-700 bg-white dark:bg-hexo-black-gray"
             >
 
                 {showArticleInfo && <header className='animate__slideInDown animate__animated'>
                     {/* meta */}
-                    <section className="flex flex-row space-x-2 -mx-1 my-2 text-gray-500 dark:text-gray-400 font-light font-serif leading-7 text-sm">
+                    {/* 下面这里加whitespace-nowrap是为了防止文本中含有的空格导致强行换行 */}
+                    <section className=" whitespace-nowrap overflow-x-auto space-x-2 -mx-1 my-2 text-gray-500 dark:text-gray-400 font-light font-serif leading-7 text-sm">
                         <div className='flex flex-nowrap justify-left'>
                             {post?.type !== 'Page' && (<>
                                 <Link
@@ -54,19 +55,21 @@ export default function ArticleDetail(props) {
                                     </div>
                                 </Link>
                                 {/* <span className='mr-2'> | <i className='far fa-calendar-check mr-2' />{post.lastEditedTime} </span> */}
-                                <span className='mr-3'> | {'UPDATED: ' + post.lastEditedTime} </span>
+                                <span className='mr-1'> / {'UPDATED: ' + post.lastEditedTime} </span>
                                 
                                 {/* 分类 */}
                                 {post.category && <>
                                         <Link href={`/category/${post.category}`} passHref legacyBehavior>
-                                            <div className="mr-3 cursor-pointer my-auto text-md  hover:text-blue-600 dark:hover:text-white border-b dark:text-gray-500 border-none">
-                                                <><i className="far fa-folder-open" /> {post.category}</>
+                                            <div className="mr-1 cursor-pointer my-auto text-md  hover:text-blue-600 dark:hover:text-white border-b dark:text-gray-500 border-none">
+                                                {/* <><i className="far fa-folder-open" /> {post.category}</> */}
+                                                <> / {post.category}</>
                                             </div>
                                         </Link>
                                 </>}
                                 
                                 <div className="hidden busuanzi_container_page_pv font-light mr-3">
-                                    <i className='mr-1 fas fa-eye' />
+                                    <span className='mr-1'>/</span>
+                                    <i className='mr-1 fas fa-eye' /> 
                                     <span className="busuanzi_value_page_pv" />
                                 </div>
 
