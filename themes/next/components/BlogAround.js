@@ -10,11 +10,11 @@ export default function BlogAround ({ prev, next }) {
     return <></>
   }
   return (
-    <section className='text-gray-800 border-t dark:text-gray-300 flex flex-wrap justify-between py-2 lg:flex-nowrap lg:space-x-10 '>
+    <section className='text-gray-800 border-t dark:text-gray-300 flex flex-wrap  py-2 lg:flex-nowrap lg:space-x-10 '>
       {prev && <Link
         href={`/${prev.slug}`}
         passHref
-        className='text-sm py-3 text-gray-600 font-serif hover:text-blue-600 cursor-pointer'>
+        className='justify-start text-sm py-3 text-gray-600 font-serif hover:text-blue-600 cursor-pointer'>
 
         <i className='mr-1 fa fa-chevron-left' />{prev.title}
 
@@ -22,7 +22,7 @@ export default function BlogAround ({ prev, next }) {
       {next && <Link
         href={`/${next.slug}`}
         passHref
-        className='text-sm flex py-3 text-gray-600 font-serif hover:text-blue-600 cursor-pointer'>
+        className='justify-end text-sm flex py-3 text-gray-600 font-serif hover:text-blue-600 cursor-pointer'>
         {next.title}
         <i className='ml-1 my-1 fa fa-chevron-right' />
 
