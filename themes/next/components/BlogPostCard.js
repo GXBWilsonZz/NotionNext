@@ -18,44 +18,49 @@ const BlogPostCard = ({ post, showSummary }) => {
         key={post.id}
         className="flex flex-col-reverse justify-between duration-300"
       >
-        <div className="lg:px-4 pt-0 p-4 flex flex-col w-full">
+        <div className="lg:px-4 pt-1 p-4 flex flex-col w-full ">
           <Link
             href={`${BLOG.SUB_PATH}/${post.slug}`}
             passHref
-            className={`cursor-pointer hover:none font-serif font-bold text-3xl ${showPreview ? 'text-center' : ''
-              } leading-tight text-gray-700 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400`}>
+            className={`cursor-pointer hover:none font-serif font-bold text-[28px] ${showPreview ? 'text-center' : ''
+              } leading-tight text-gray-800 dark:text-gray-100 hover:text-blue-500 dark:hover:text-blue-400`}>
 
             <NotionIcon icon={post.pageIcon} /> {post.title}
 
           </Link>
 
           <div
-            className={`flex mt-2 items-center ${showPreview ? 'justify-center' : 'justify-start'
+            className={`flex mt-1.5 items-center ${showPreview ? 'justify-center' : 'justify-start'
               } flex-wrap dark:text-gray-500 text-gray-500 `}
           >
             <div>
+              <>
+                <Link
+                  href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
+                  passHref
+                  className="font-light font-serif hover:hover:text-blue-600 dark:hover:text-blue-400  cursor-pointer text-sm leading-4">
+
+                  {post.date?.start_date}
+
+                </Link>
+                <span className="mx-2">/</span>
+              </>
               {post.category && (
                 <>
                   <Link
                     href={`/category/${post.category}`}
                     passHref
-                    className="cursor-pointer font-light font-serif text-sm hover:text-blue-600 dark:hover:text-blue-400  transform">
+                    className="cursor-pointer font-light font-serif text-sm hover:text-blue-600 dark:hover:text-blue-400  mr-3  transform">
 
-                    <i className="mr-1 fas fa-folder" />
+                    <i className="mr-0" /> 
+                    
                     {post.category}
 
                   </Link>
-                  <span className="mx-2">|</span>
+
                 </>
               )}
-              <Link
-                href={`/archive#${post?.date?.start_date?.substr(0, 7)}`}
-                passHref
-                className="font-light font-serif hover:hover:text-blue-600 dark:hover:text-blue-400  cursor-pointer text-sm leading-4 mr-3">
 
-                {post.date?.start_date}
-
-              </Link>
             </div>
             <div className="font-serif md:flex-nowrap flex-wrap md:justify-start inline-block">
               <div>
@@ -68,7 +73,7 @@ const BlogPostCard = ({ post, showSummary }) => {
           </div>
 
           {(!showPreview || showSummary) && !post.results && (
-            <p className="mt-4 mb-4 text-gray-700 dark:text-gray-300 text-base font-light leading-7">
+            <p className="mt-6 mb-6 text-gray-600 dark:text-gray-300 font-sans text-[15px] font-light leading-7">
               {post.summary}
             </p>
           )}
@@ -88,13 +93,13 @@ const BlogPostCard = ({ post, showSummary }) => {
             </div>
           )}
 
-          <div className="text-left border-t pt-4 border-none text-xs font-sans">
+          <div className="text-left border-t pt-4 border-none text-[12px] font-sans">
             <Link
               href={`${BLOG.SUB_PATH}/${post.slug}`}
-              className="hover:bg-opacity-100 hover:bg-gray-200 transform duration-300 py-2 px-3 font-sans font-light text-gray-500 bg-gray-100 cursor-pointer">
+              className="hover:bg-opacity-100 hover:bg-gray-200 transform duration-300 py-1.5 px-2.5 font-serif font-light text-gray-700 bg-gray-100 cursor-pointer">
 
               {locale.COMMON.ARTICLE_DETAIL}
-              <i className="ml-1 fas fa-angle-right" />
+
 
             </Link>
           </div>
