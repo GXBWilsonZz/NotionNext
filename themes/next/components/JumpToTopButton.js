@@ -15,7 +15,7 @@ const JumpToTopButton = ({ showPercent = true, percent }) => {
     return <></>
   }
   const { locale } = useGlobal()
-  return (<div className='flex space-x-1 rounded-md bg-gray-100 items-center transform hover:scale-105 duration-200 py-2 px-4' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} >
+  return (<div className='flex space-x-1 rounded-md bg-gray-100 items-center transform hover:scale-105 duration-200 py-2 px-4 dark:bg-gray-700' onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} >
         <div className='dark:text-gray-200' title={locale.POST.TOP} >
           <i className='fa fa-chevron-up' />
         </div>

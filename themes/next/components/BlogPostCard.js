@@ -74,6 +74,7 @@ const BlogPostCard = ({ post, showSummary }) => {
           </div>
 
           {(!showPreview || showSummary)&& post.summary && !post.results && (
+            //这里加入&&post.summary 是为了在没有preview内容时不占用额外空间
             <p className="mt-6 mb-6 text-gray-600 dark:text-gray-300 font-sans text-[15px] font-light leading-7">
               {post.summary}
             </p>
@@ -97,7 +98,7 @@ const BlogPostCard = ({ post, showSummary }) => {
           <div className="text-left border-t pt-4 border-none text-[12px] font-sans">
             <Link
               href={`${BLOG.SUB_PATH}/${post.slug}`}
-              className="hover:bg-opacity-100 hover:bg-gray-200 transform duration-300 py-1.5 px-2.5 font-serif font-light text-gray-700 bg-gray-100 cursor-pointer">
+              className="hover:bg-opacity-100 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-200 transform duration-300 py-1.5 px-2.5 font-serif font-light text-gray-700 bg-gray-100 cursor-pointer">
 
               {locale.COMMON.ARTICLE_DETAIL}
 
