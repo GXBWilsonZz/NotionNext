@@ -108,7 +108,7 @@ const TopNav = (props) => {
         </div>
 
         {/* 右侧功能 */}
-        <div className='mr-1 flex justify-end items-center text-sm space-x-4 font-serif dark:text-gray-200'>
+        <div className='mr-1 flex justify-end items-center text-sm space-x-4 font-sans font-bold dark:text-gray-200'>
           <div className="cursor-pointer block lg:hidden" onClick={() => { searchDrawer?.current?.show() }}>
             <i className="mr-2 fas fa-search" />{locale.NAV.SEARCH}
           </div>
