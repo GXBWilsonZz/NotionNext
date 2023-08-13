@@ -11,7 +11,7 @@ export default function ArticleCopyright ({ author, url }) {
     <section className="dark:text-gray-300 mt-6">
       <ul className="overflow-x-auto whitespace-nowrap text-sm dark:bg-gray-700 bg-gray-100 p-5 leading-8 border-none border-blue-500 rounded-md">
         <li>
-          <strong className='mr-2 font-serif font-bold'>{'💡欢迎在评论区进行讨论！作者知识水平有限，如有错误，请多多指正'}</strong>
+          <strong className='mr-2 font-serif font-bold'>{'💡个人知识水平有限，如有错误，烦请指正'}</strong>
         </li>
         <li>
           <strong className='mr-2 font-serif'>{locale.COMMON.AUTHOR}:</strong>

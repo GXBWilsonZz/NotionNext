@@ -10,7 +10,7 @@ export default function BlogAround ({ prev, next }) {
     return <></>
   }
   return (
-    <section className='text-gray-800 border-t dark:text-gray-300 flex flex-wrap lg:flex-nowrap lg:space-x-10 justify-between py-2'>
+    <section className='text-gray-800 border-t dark:text-gray-300 flex flex-wrap justify-between py-2 lg:flex-nowrap lg:space-x-10 '>
       {prev && <Link
         href={`/${prev.slug}`}
         passHref
